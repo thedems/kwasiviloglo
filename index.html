@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+	
+	<!--
+		Basic
+	-->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<title>Kwasivi N. E. Yannick LOGLO - Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="Mon portfolio" />
+	<meta name="keywords" content="Mon portfolio" />
+	<meta name="author" content="Kwasivi N. E. Yannick LOGLO" />
+	
+	<!--
+		Load Fonts
+	-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	
+	<!--
+		Load CSS
+	-->
+	<link rel="stylesheet" href="css/basic.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="css/blogs.css" />
+	<link rel="stylesheet" href="css/ionicons.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+
+	<!--
+		Background Gradient
+	-->
+	<link rel="stylesheet" href="css/gradient.css" />
+	
+	<!--
+		Template New-Skin
+	-->
+	<link rel="stylesheet" href="css/new-skin/new-skin.css" />
+
+	<!--
+		Template RTL
+	-->
+	<!--<link rel="stylesheet" href="css/rtl.css" />-->
+	
+	<!--
+		Template Colors
+	-->
+	<link rel="stylesheet" href="css/demos/demo-3-colors.css" />
+	<!--<link rel="stylesheet" href="css/template-colors/blue.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/orange.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/pink.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/purple.css" />-->
+	<!--<link rel="stylesheet" href="css/template-colors/red.css" />-->
+
+	<!--
+		Template Dark
+	-->
+	<!--<link rel="stylesheet" href="css/template-dark/dark.css" />-->
+	<script src="js/jquery.min.js"  crossorigin="anonymous"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="js/imagesloaded.pkgd.js"></script>
+	<script src="js/isotope.pkgd.js"></script>
+	<script src="js/jquery.slimscroll.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/typed.js"></script>
+	<script src="https://use.fontawesome.com/8da76d029b.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!--
+		Favicons
+	-->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-125314689-11');
+	</script>
+	<script src="js/chatbox.js"></script>
+<script>
+	 function postEmail() {
+		console.log("function called");
+		$.ajax({
+			url: "https://formspree.io/f/xdobprvy",
+			method: "POST",
+			data: {
+				email: $("#email").val(),
+				name: $("#name").val(),
+				message: $("#message").val(),
+			},
+			dataType: "json",
+		})
+			.then(function () {
+				$('#form input:not([type="submit"]), textarea').val("");
+			})
+			.catch(() => {
+				swal({
+					icon: "error",
+					title: "Oh Oh!",
+					text: "Quelque chose s'est mal passé avec les serveurs de formulaires, n'hésitez pas à me contacter à kwasiviloglo@gmail.com !",
+				});
+			});
+	}
+	  function formSubmission() {
+			if ($('#form input:not([type="submit"])').val() === "" || $("#form textarea").val() === "") {
+				console.log("no dice");
+				swal({
+					icon: "error",
+					title: "Uh Oh!",
+					text: "Merci de remplir tous les champs afin que je puisse vous recontacter !",
+				});
+			} else {
+				postEmail();
+				console.log("sent off");
+				swal({
+					icon: "success",
+					buttons: false,
+					timer: 1800,
+					text: `Message envoyé!`,
+				});
+			}
+	}
+</script>
+</head>
+
+<body>
+	<div class="page new-skin">
+		
+		<!-- preloader -->
+		<div class="preloader">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="spinner">
+						<div class="double-bounce1"></div>
+						<div class="double-bounce2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- background -->
+		<div class="background gradient">
+			<ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+		</div>
+
+		<!--
+			Container
+		-->
+		<div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+
+			<!--
+				Header
+			-->
+			<header class="header">
+
+				<!-- header profile -->
+				<div class="profile">
+					<div class="title">Kwasivi N. E. Yannick LOGLO</div>
+					<div class="subtitle subtitle-typed">
+						<div class="typing-title">
+							<p>Technicien Réseaux&Télécoms</p>
+							<p>Etudiant en ingénierie informatique spécialité Cybersécurité</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- menu btn -->
+				<a href="#" class="menu-btn"><span></span></a>
+
+				<!-- menu -->
+				<div class="top-menu">
+					<ul>
+						<li class="active">
+							<a href="#about-card">
+								<span class="icon ion-person"></span>
+								<span class="link">A propos</span>
+							</a>
+						</li>
+						<li>
+							<a href="#resume-card">
+								<span class="icon ion-android-list"></span>
+								<span class="link">CV</span>
+							</a>
+						</li>
+						<li>
+							<a href="#works-card">
+								<span class="icon ion-paintbrush"></span>
+								<span class="link">Portfolio</span>
+							</a>
+						</li>
+						<li>
+							<a href="#contacts-card">
+								<span class="icon ion-at"></span>
+								<span class="link">Contact</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</header>
+
+			<!--
+				Card - Started
+			-->
+			<div class="card-started" id="home-card">
+
+				<!--
+					Profile
+				-->
+				<div class="profile no-photo">
+
+					<!-- profile image -->
+					<div class="slide" style="background-image: url(images/photopasseport-loglo.jpg);"></div>
+
+					<!-- profile titles -->
+					<div class="title">Kwasivi N. E. Yannick LOGLO</div>
+					<!--<div class="subtitle">Web Designer</div>-->
+					<div class="subtitle subtitle-typed">
+						<div class="typing-title">
+							<p>Technicien Réseaux&Télécoms</p>
+							<p>Etudiant en ingénierie informatique spécialité Cybersécurité</p>
+						</div>
+					</div>
+
+					<!-- profile socials -->
+					<div class="social">
+						<a target="_blank" href="https://www.linkedin.com/in/yannick-loglo/"><span class="fa fa-linkedin"></span></a>
+						<a target="_blank" href="https://github.com/kwasivi39/"><span class="fa fa-github"></span></a>
+					</div>
+					
+					<!-- profile buttons -->
+					<div class="lnks">
+						<a href="doc/cv_linked.pdf" class="lnk">
+							<span class="text">Télécharger le CV</span>
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 
+				Card - About
+			-->
+			<div class="card-inner animated active" id="about-card">
+				<div class="card-wrap">
+
+					<!-- 
+						About 
+					-->
+					<div class="content about">
+
+						<!-- title -->
+						<div class="title">A propos de moi</div>
+
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="text-box">
+									<p>
+										Rigoureux, discipliné et toujours prêt à relever de nouveaux défis, je suis titulaire d'une Licence en réseaux informatiques & télécommunications avec 5 années d'expériences, actuellement en reprise d'étude (cycle 2) pour un diplôme d'ingénieur en cybersécurité.
+									</p>
+									<p>
+										Passionné de la sécurité informatique,  je transite facilement de l'abstrait au concret. De la théorie à la pratique, indépendamment des technologies à utiliser.
+									</p>
+								</div>
+							</div>
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="info-list">
+									<ul>
+										<!-- <li><strong>Age . . . . .</strong> <label id="age"></label></li> -->
+										<li><strong>Pays . . . . .</strong> France</li>
+										<li><strong>Adresse . . . . .</strong> Angers, Pays de la</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!--
+						Services
+					-->
+					<div class="content services">
+						<!-- title -->
+						<div class="title">Mes domaines de compétences</div>
+
+						<!-- content -->
+						<div class="row service-items border-line-v">
+							<!-- service item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon">
+										<span class="fa fa-code"></span>
+									</div>
+									<div class="name">
+										<span >
+										Mise en place d'un réseau d'entreprise
+										</span>
+									</div>
+									<div class="desc">
+										<div >
+											<p>
+                                                Analyse des besoins, propositions, conception, mise en oeuvre, test et déploiement.
+                                            </p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- service item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon">
+										<span class="fa fa-database"></span>
+									</div>
+									<div class="name">
+										<span >
+										Administration des BD						</span>
+									</div>
+									<div class="desc">
+										<div >
+											<p>Mise en place du model conceptuel(MCD) avec MERISE et des requètes(Définition, controle et manipulation des données)</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row service-items border-line-v">
+							<!-- service item -->
+
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon">
+										<span class="fa fa-server"></span>
+									</div>
+									<div class="name">
+										<span >
+										Administration réseau					</span>
+									</div>
+									<div class="desc">
+										<div >
+											<p>
+                                                administration système linux et Windows server, administration réseau local d'entreprise.
+                                            </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+					</div>
+
+					<div class="content quote">
+
+						<!-- title -->
+						<div class="title">
+							<span >Témoignages</span>
+						</div>
+
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="revs-item">
+									<div class="text">
+										<div >
+											Le définir en trois mots: Dynamique, Rigoureux et compétent.					
+										</div>
+									</div>
+									<div class="user">
+										<div class="img">
+											<img src="images/pavel_img.webp" alt="Pavel" />
+										</div>
+										<div class="info">
+											<div class="name">Pavel d'Almeida</div>
+											<div class="company">Ingénieur informaticien, Dakar - Sénégal</div>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!--
+				Card - Resume
+			-->
+			<div class="card-inner" id="resume-card">
+				<div class="card-wrap">
+
+					<!--
+						Resume
+					-->
+					<div class="content resume">
+
+						<!-- title -->
+						<div class="title">CV</div>
+
+						<!-- content -->
+						<div class="row">
+
+							<!-- experience -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="fa fa-briefcase"></i></div>
+									<div class="name">Expériences</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h active">
+										<div class="date">2016 - 2021.</div>
+										<div class="name">Technicien Support Technique</div>
+										<div class="company"><a href="https://www.cafe.tg/" target="_blank"> CAFE Informatique & Télécommunications S.A</a></div>
+										<p>Dans ma mission de technicien support technique au sein du département Transmission de données, j'ai eu pour tâches de faire:</p>
+											<ul>
+												<li>-> L'analyse du besoin, l'étude préalable,</li>
+												<li>-> La conception détaillée, le déploiement, l'installation</li>
+												<li>-> Ainsi que le dépannage des anomalies remontées par le client</li>
+												<li>-> Gestion et maintenance des serveurs (PPPoe, Radius, Splynx…)</li>
+												<li>-> Installation et gestion et dépannage des abonnés Internet</li>
+												<li>-> Installer et conduire les travaux d’extension des liaisons de données</li>
+												<li>-> Analyser les incidents relevés et appliquer les correctifs planifiés</li>
+												<li>-> Configurer des routeurs et commutateurs cisco, mikrotik, ubiquiti</li>
+												<li>-> Veille technologique</li>
+												<li>-> Rédaction de documents techniques</li>
+												<li>-> Câblage et dépannage réseaux</li>
+												<li>-> Soutient technique aux clients internet.</li>
+											</ul>	
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">2015 - 2016</div>
+										<div class="name">Stagiaire au poste de Technicien Support</div>
+										<div class="company"><a href="https://www.cafe.tg/" target="_blank" rel="noopener noreferrer"> CAFE Informatique & Télécommunications S.A</a></div>
+										<p>
+										En temps que stagiaire à la direction technique, j'ai eu pour tâches :
+										</p>
+									<ul>
+										<li> Installation de la connexion internet aux particuliers,</li>
+										<li> Dépannage,</li>
+										<li> Support aux utilisateurs du réseau interne ainsi que externe de l'entreprise .</li>
+									</ul>	 
+									</div>
+									<!--<div class="resume-item">
+										<div class="date">2020</div>
+										<div class="name">Senior Developer</div>
+										<div class="company">Abc Inc.</div>
+										<p>
+											Optimize website performance using latest technology.
+										</p>
+									</div>-->
+								</div>
+							</div>
+
+							<!-- education -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="resume-title border-line-h">
+									<div class="icon"><i class="fa fa-university"></i></div>
+									<div class="name">Formations</div>
+								</div>
+								<div class="resume-items">
+									<div class="resume-item border-line-h">
+										<div class="date">2021 - Aujourd'hui</div>
+										<div class="name">ESAIP, Ecole d'ingénieur</div>
+										<div class="company">Angers</div>
+										<p>
+											Diplôme d'ingénieur - Ingénieur en Cybersécurité
+										</p>
+									</div>
+									<div class="resume-item border-line-h">
+										<div class="date">2011 - 2015</div>
+										<div class="name">Université Catholique de l'Afrique de l'Ouest - Unité universitaire du Togo (UCAO-UUT)</div>
+										<div class="company">Lomé</div>
+										<p>
+											Diplôme de Licence en informatique option Réseaux informatiques & Télécommunications.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+					</div>
+
+					<!--
+						Skills
+					-->
+					<div class="content skills">
+
+						<!-- title -->
+						<div class="title">Mes compétences</div>
+					
+						<!-- content -->
+						<div class="row">
+						
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-paint-brush"></i></div>
+										<div class="name">Gestion de projet et génie logiciel</div>
+									</div>
+									<ul>
+										<li class="border-line-h"> 
+											<div class="name">Méthode agile</div>
+											<div class="progress">
+												<div class="percentage" style="width:40%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">UML</div>
+											<div class="progress">
+												<div class="percentage" style="width:50%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">MERISE</div>
+											<div class="progress">
+												<div class="percentage" style="width:60%;"></div>
+											</div>
+										</li>
+										<li>
+											<div class="name">Cycle en V</div>
+											<div class="progress">
+												<div class="percentage" style="width:85%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list dotted">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-flag"></i></div>
+										<div class="name">Languages</div>
+									</div>
+									<ul>
+										<li class="border-line-h"> 
+											<div class="name">Anglais</div>
+											<div class="progress">
+												<div class="percentage" style="width:60%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h"> 
+											<div class="name">Espagnol</div>
+											<div class="progress">
+												<div class="percentage" style="width:10%;"></div>
+											</div>
+										</li>
+										<li>
+											<div class="name">Français</div>
+											<div class="progress ">
+												<div class="percentage" style="width:80%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list circles">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-code"></i></div>
+										<div class="name">Programmation</div>
+									</div>
+									<ul>
+										<li> 
+											<div class="name">Java</div>
+											<div class="progress p75">
+												<span>75%</span>
+											</div>
+										</li>
+										<li> 
+											<div class="name">PHP / MYSQL</div>
+											<div class="progress p75">
+												<span>75%</span>
+											</div>
+										</li>
+										<li> 
+											<div class="name">JavaScript</div>
+											<div class="progress p60">
+												<span>60%</span>
+											</div>
+										</li>
+										<li> 
+											<div class="name">HTML / CSS</div>
+											<div class="progress p95">
+												<span>95%</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- skill item -->
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list list">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="fa fa-list"></i></div>
+										<div class="name">Connaissance</div>
+									</div>
+									<ul>
+										<li> 
+											<div class="name">Java, Html, Css, Php, Mysql, SQLServer</div>
+										</li>
+										<li> 
+											<div class="name">Git</div>
+										</li>
+										<li> 
+											<div class="name">Conception, déploiement, configuration et maintenance d'un
+												réseau LAN, WAN, WIFI et Monitoring</div>
+										</li>
+										<li> 
+											<div class="name">Mise en place et maintenance de liaison métropolitaine
+												longue distance</div>
+										</li>
+										<li> 
+											<div class="name">Installation, Configuration de Routeurs & Switchs CISCO et MIKROTIK</div>
+										</li>
+										<li> 
+											<div class="name">Windows server, Linux Server</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="clear"></div>
+						</div>
+						
+					</div>
+
+					<!--
+						Testimonials
+					-->
+
+				</div>
+			</div>
+
+			<!--
+				Card - Works
+			-->
+			<div class="card-inner" id="works-card">
+				<div class="card-wrap">
+					<div class="content works">
+						<div class="title">Mes travaux</div>
+					<!-- <div class="row">
+							<div class="col col-d-6 col-t-6 col-m-12">
+								<a href="images/certif.png" class="has-popup-image">
+											<img src="images/certif.png" class="img-thumbnail" style="width: 250px;" alt="" />
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+																		<a href="images/certif.png" class="has-popup-image">Mes certifications</a>
+	
+							</div>
+							
+							<div class="col col-d-6 col-t-6 col-m-12">
+								<a href="images/projet.png" class="has-popup-image">
+											<img src="images/projet.png" class="img-thumbnail" style="width: 250px;" alt="" />
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+																		<a href="images/projet.png" class="has-popup-image">Mes projets</a>
+	
+							</div>
+						</div> -->
+
+			
+					</div>
+				</div>
+			</div>
+
+			<!--
+				Card - Blog
+			-->
+
+			<!--
+				Card - Contacts
+			-->
+			<div class="card-inner contacts" id="contacts-card">
+				<div class="card-wrap">
+<div class="content contacts">
+
+						<!-- title -->
+						<div class="title">Contact</div>
+
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="contact_form">
+									<form id="form" method="post" action="#">
+										<div class="row">
+											<div class="col col-d-6 col-t-6 col-m-12">
+												<div class="group-val">
+													<input type="text" name="name" id="name" placeholder="Nom" />
+												</div>
+											</div>
+											<div class="col col-d-6 col-t-6 col-m-12">
+												<div class="group-val">
+													<input type="text" name="email" id="email" placeholder="adresse mail" />
+												</div>
+											</div>
+											<div class="col col-d-12 col-t-12 col-m-12">
+												<div class="group-val">
+													<textarea name="message" id="message" placeholder="Salut Yannick," ></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="align-left">
+											<a href="#" class="button" onclick="formSubmission()">
+												<span class="text">Envoyer</span>
+												<span class="arrow"></span>
+											</a>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>	
+	</div>
+	
+	<!--
+		jQuery Scripts
+	-->
+
+    <!-- <script>  
+        var dob = new Date("06/01/1999");  
+        //calculate month difference from current date in time  
+        var month_diff = Date.now() - dob.getTime();  
+          
+        //convert the calculated difference in date format  
+        var age_dt = new Date(month_diff);   
+          
+        //extract year from date      
+        var year = age_dt.getUTCFullYear();  
+          
+        //now calculate the age of the user  
+        var age = Math.abs(year - 1970);  
+          
+        //display the calculated age  
+        document.getElementById("age").innerHTML=age;  
+    </script>  -->
+
+</body>
+</html>
