@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently studying at ESAIP 
 
-- 🌱 I’m currently learning **CEH12, Java EE, and Angular**
+- 🌱 I’m currently learning **CEH12, Java EE**
 
 - 👨‍💻 All of my projects are available at
 
