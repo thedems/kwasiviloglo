@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently studying at **ESAIP, école d'ingénieurs **
 
-- 🌱 I’m currently learning **CEH12, Java EE**
+- 🌱 I’m currently learning **CEH11, Pentesting, Network Security Management**
 
 - 👨‍💻 All of my projects are available at
 
