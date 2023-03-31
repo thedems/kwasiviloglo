@@ -7,7 +7,7 @@
 
 - 👨‍💻 All of my projects are available at
 
-- 💬 Ask me about **Network, CISCO and MIKROTIK**
+- 💬 Ask me about **Network, CISCO and MIKROTIK, and Cybersecurity**
 
 - 📫 How to reach me **kwasiviloglo@gmail.com**
 
