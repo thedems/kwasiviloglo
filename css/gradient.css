@@ -16,9 +16,9 @@
 
 
 .background.gradient {
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left, #50a3a2 0%, #78cc6d 100%);
-  background: linear-gradient(to bottom right, #50a3a2 0%, #78cc6d 100%);
+  background: #87CEEB; /* Bleu clair */
+  background: -webkit-linear-gradient(top left, #87CEEB 0%, #191970 100%); /* Dégradé linéaire du bleu clair au bleu nuit pour les navigateurs WebKit */
+  background: linear-gradient(to bottom right, #87CEEB 0%, #191970 100%); /* Dégradé linéaire du bleu clair au bleu nuit */
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -26,6 +26,7 @@
   width: 100%;
   height: 100%;
 }
+
 
 .bg-bubbles {
   position: absolute;
