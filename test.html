@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwasivi LOGLO - Cybersécurité & Réseaux (Refonte Audacieuse)</title>
+
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        style-src 'self' https://fonts.googleapis.com; 
+        font-src 'self' https://fonts.gstatic.com; 
+        script-src 'self'; 
+        object-src 'none'; 
+        base-uri 'self';
+    ">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. VARIABLES & RESET */
+        :root {
+            --color-dark-bg: #1A1A2E; /* Fond principal (Cyber Dark) */
+            --color-accent-blue: #00FFFF; /* Bleu Électrique (Néon) */
+            --color-text-light: #F0F0F5; /* Texte clair */
+            --color-text-faded: #B0B0C0; /* Texte secondaire */
+            --font-main: 'Inter', sans-serif;
+            --section-padding: 80px 5%;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 2. BASE STYLES */
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-dark-bg);
+            color: var(--color-text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--color-accent-blue);
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-text-light);
+            text-shadow: 0 0 5px var(--color-accent-blue);
+        }
+
+        h1, h2, h3 {
+            font-weight: 800;
+            margin-bottom: 0.5em;
+            letter-spacing: -0.05em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--color-accent-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 40px;
+        }
+
+        section {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        /* 3. HEADER / NAVIGATION (Audacieux) */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.9); /* Fond légèrement transparent */
+            backdrop-filter: blur(5px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--color-accent-blue);
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: var(--color-text-faded);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--color-accent-blue);
+        }
+
+        /* 4. HERO SECTION (Ultra-Moderne) */
+        #hero {
+            padding: 120px 5% 80px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-accent-blue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .hero-title {
+            font-size: 4.5rem; /* Très grand */
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: var(--color-accent-blue);
+            /* Effet de texte inspiré de l'écran terminal */
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            display: inline-block;
+        }
+
+        .hero-bio {
+            font-size: 1.2rem;
+            color: var(--color-text-faded);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--color-accent-blue);
+            color: var(--color-dark-bg);
+            font-weight: 700;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 255, 255, 0.4);
+            text-shadow: none; /* Désactive l'effet néon sur le lien */
+        }
+
+        /* 5. SECTIONS DÉTAILLÉES */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: rgba(30, 30, 50, 0.7); /* Fond de carte légèrement plus clair */
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            transition: all 0.3s ease-in-out;
+            /* Effet Néon subtil sur la carte */
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            color: var(--color-accent-blue);
+            font-size: 1.5rem;
+        }
+
+        .skill-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            height: 10px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, #00FFFF, #00FF7F);
+            transition: width 1s ease-out;
+        }
+
+        /* 6. EXPÉRIENCE/FORMATION (Mise en page Chronologique) */
+        .timeline-item {
+            border-left: 2px solid var(--color-accent-blue);
+            padding-left: 25px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-accent-blue);
+            border-radius: 50%;
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            box-shadow: 0 0 8px var(--color-accent-blue);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--color-text-faded);
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        
+        /* 7. FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 5%;
+            border-top: 1px solid rgba(0, 255, 255, 0.1);
+            color: var(--color-text-faded);
+        }
+        
+        /* 8. MEDIA QUERIES (Responsiveness) */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">K. LOGLO / CYBERSEC</div>
+        <nav>
+            <a href="#about">À Propos</a>
+            <a href="#cv">CV</a>
+            <a href="#projects">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">Technicien Réseaux & Télécoms</p>
+                <h1 class="hero-title">
+                    Kwasivi N. E. Yannick LOGLO
+                    <br>Étudiant Ingénieur en <span>Cybersécurité</span>
+                </h1>
+                <p class="hero-bio">
+                    Rigoureux et passionné par la sécurité informatique, je transite de l'abstrait au concret pour relever les défis de la protection des systèmes numériques.
+                </p>
+                <a href="#cv" class="cta-button">Consulter mon CV</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>À Propos</h2>
+            <div class="grid-3">
+                <div class="card" style="grid-column: span 2;">
+                    <h3>Mon Profil</h3>
+                    <p>Titulaire d'une Licence en réseaux informatiques & télécommunications avec 5 années d'expériences, je suis actuellement en cycle d'ingénieur en Cybersécurité à l'ESAIP.</p>
+                    <p style="margin-top: 15px; color: var(--color-accent-blue);">
+                        **Objectif :** Devenir expert en cybersécurité et consultant pour une entreprise de renom.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3>Contact Rapide</h3>
+                    <p>Pays : France</p>
+                    <p>Ville : Angers, Pays de la Loire</p>
+                    <p style="margin-top: 15px;"><a href="#">[Simuler un lien d'email]</a></p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 80px;">Domaines d'Expertise</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Administration Réseau</h3>
+                    <p class="timeline-date">Administration système Linux & Windows Server. Configuration CISCO/MIKROTIK.</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="85" style="width: 85%;"></div></div>
+                </div>
+                <div class="card">
+                    <h3>Cybersécurité (CEH)</h3>
+                    <p class="timeline-date">Formation continue en éthique du hacking, veille technologique et analyse d'incidents.</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="55" style="width: 55%;"></div></div>
+                </div>
+                <div class="card">
+                    <h3>Bases de Données / Développement</h3>
+                    <p class="timeline-date">Mise en place MCD (MERISE), requêtes (MySQL, SQLServer). Notions Java, HTML/CSS/PHP.</p>
+                    <div class="skill-bar"><div class="skill-level" data-level="70" style="width: 70%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2>CV & Expériences</h2>
+
+            <div class="timeline">
+                <h3>Expériences Professionnelles</h3>
+                
+                <div class="timeline-item">
+                    <p class="timeline-date">2016 - 2021</p>
+                    <h4 class="timeline-title">Technicien Support Technique</h4>
+                    <p>CAFE Informatique & Télécommunications S.A.</p>
+                    <ul style="margin-top: 10px; padding-left: 20px; list-style-type: '» ';">
+                        <li>Analyse de besoin, conception, déploiement et dépannage des anomalies.</li>
+                        <li>Gestion et maintenance des serveurs (PPPoe, Radius, Splynx…).</li>
+                        <li>Configuration de routeurs et commutateurs Cisco, Mikrotik, Ubiquiti.</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <p class="timeline-date">2015 - 2016</p>
+                    <h4 class="timeline-title">Stagiaire Technicien Support</h4>
+                    <p>CAFE Informatique & Télécommunications S.A.</p>
+                </div>
+
+                <h3 style="margin-top: 60px;">Formations</h3>
+                
+                <div class="timeline-item">
+                    <p class="timeline-date">2021 - Aujourd'hui</p>
+                    <h4 class="timeline-title">Diplôme d'ingénieur en Cybersécurité</h4>
+                    <p>ESAIP, Angers (France)</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <p class="timeline-date">2011 - 2015</p>
+                    <h4 class="timeline-title">Licence en Réseaux informatiques & Télécommunications</h4>
+                    <p>UCAO-UUT, Lomé</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projet Professionnel & Valeurs</h2>
+
+            <div class="card" style="margin-bottom: 30px;">
+                <h3>Orientation Cybersécurité</h3>
+                <p>Mon choix est motivé par la passion pour la technologie et la sécurité, le besoin de relever des défis constants et l'impact sociétal de la protection contre les cyberattaques.</p>
+                <p style="margin-top: 15px; font-style: italic; color: var(--color-text-faded);">
+                    "J'ai été convaincu par l'importance croissante de la cybersécurité dans tous les secteurs de l'économie et de la société."
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Engagements Bénévoles</h3>
+                <p>Ces expériences ont contribué à mon développement personnel, développant l'empathie, la communication efficace et la gestion d'équipe :</p>
+                <ul style="margin-top: 10px; padding-left: 20px; list-style-type: disc;">
+                    <li>Organisation du concours d'éloquence (ESAIP).</li>
+                    <li>Bénévolat en centre pour personnes âgées (Erasmus LV1, Bulgarie).</li>
+                    <li>Resto du Cœur (Distribution de vivres).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <div class="grid-3">
+                <div class="card" style="grid-column: 2 / span 1; text-align: center;">
+                    <h3>Lien Externe</h3>
+                    <p>Pour un CV plus détaillé ou prise de contact professionnelle, veuillez utiliser les plateformes adéquates.</p>
+                    <a href="#" class="cta-button" style="margin-top: 15px;">Télécharger le CV (PDF)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kwasivi N. E. Yannick LOGLO. Refonte Ultra-Moderne & Sécurisée.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Effet d'apparition progressif des niveaux de compétences (uniquement visuel)
+            const skillLevels = document.querySelectorAll('.skill-level');
+            skillLevels.forEach(skill => {
+                const level = skill.getAttribute('data-level');
+                // Démarre l'animation CSS une fois la page chargée
+                setTimeout(() => {
+                    skill.style.width = level + '%';
+                }, 100); 
+            });
+
+            // Gestion simple de la navigation pour marquer le lien actif
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 80; // Moins la hauteur du header
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.href.includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
